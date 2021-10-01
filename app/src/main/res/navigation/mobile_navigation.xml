@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_headlines">
+
+    <fragment
+        android:id="@+id/navigation_headlines"
+        android:name="org.newsapi.ui.home.HeadlinesFragment"
+        android:label="@string/title_headlines"
+
+        tools:layout="@layout/fragment_headlines">
+        <action
+            android:id="@+id/action_navigation_headlinesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <!--<fragment
+        android:id="@+id/navigation_explore"
+        android:name="org.newsapi.ui.explore.ExploreFragment"
+        android:label="@string/title_explore"
+
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_navigation_explore_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/navigation_saved"
+        android:name="org.newsapi.ui.saved.SavedFragment"
+        android:label="@string/title_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_navigation_saved_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="org.newsapi.ui.detail.DetailFragment"
+        android:label="Article"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="imageTransitionUniqueId"
+            app:argType="string" />
+    </fragment>
+</navigation>

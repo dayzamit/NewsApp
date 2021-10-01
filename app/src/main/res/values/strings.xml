@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="title_headlines">Top Headlines</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_saved">Favourite news</string>
+    <string name="search_hint">Ex. Elon Musk</string>
+</resources>
