@@ -38,7 +38,7 @@ class SavedFragment : Fragment() {
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
             val adapterPosition = viewHolder.adapterPosition
             val article = newsRecyclerAdapter.currentList[adapterPosition]
-//            homeViewModel.deleteArticle(article)
+
             view?.let {
                 Snackbar.make(it, "Article Deleted!", Snackbar.LENGTH_SHORT).apply {
                     setAction("Undo") {
@@ -62,7 +62,7 @@ class SavedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding?.categoryRecyclerView?.visibility = View.GONE
+        /*binding?.categoryRecyclerView?.visibility = View.GONE*/
         setUpRecyclerView()
         observeForData()
     }
@@ -73,7 +73,7 @@ class SavedFragment : Fragment() {
         val homeRecyclerview = binding?.homeRecyclerview
         homeRecyclerview?.layoutManager = LinearLayoutManager(context)
         homeRecyclerview?.adapter = newsRecyclerAdapter
-        ItemTouchHelper(itemTouchHelper).attachToRecyclerView(homeRecyclerview)
+//        ItemTouchHelper(itemTouchHelper).attachToRecyclerView(homeRecyclerview)
     }
 
     private fun observeForData() {
