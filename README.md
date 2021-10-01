@@ -33,7 +33,7 @@ Also fetching data from the network and integrating persisted data in the databa
 <br>
 
 ## API
-The project uses [NewsApi](https://newsapi.org/). If you want to run the project then obtain an API key from [NewsApi](https://newsapi.org/) and paste it in ``  buildConfigField 'String', 'API_KEY', `API_KEY_VALUE`, like this ``API_KEY_VALUE = "YOUR_API_KEY"``
+The project uses [NewsApi](https://newsapi.org/). If you want to run the project then obtain an API key from [NewsApi](https://newsapi.org/) and paste it in ``  buildConfigField 'String', 'API_KEY', `API_KEY_VALUE`` ` API_KEY_VALUE = "YOUR_API_KEY"``
 <br>
 
 # License
