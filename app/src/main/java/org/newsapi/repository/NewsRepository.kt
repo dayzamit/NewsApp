@@ -10,11 +10,8 @@ class NewsRepository @Inject constructor(private val db: ArticleDao, private val
     suspend fun getTopHeadlines(country: String, category: String?) =
         api.getTopHeadlinesByCountry(country, category)
 
-    suspend fun getSearchedHeadlines(query: String?) = api.searchHeadlines(query)
-
     suspend fun insertArticleInDb(article: Article) = db.insertArticle(article)
 
     fun getSavedArticles() = db.getAllArticles()
 
-    suspend fun deleteArticle(article: Article) = db.deleteArticle(article)
 }

@@ -22,7 +22,7 @@ class HomeViewModel @Inject constructor(private val newsRepository: NewsReposito
     }
 
     private val mutableArticleLiveData = MutableLiveData<List<Article>?>()
-    /*private val searchedArticleLiveData = MutableLiveData<List<Article>?>()*/
+
 
     fun fetchTopHeadlines(
         country: String,
@@ -38,20 +38,7 @@ class HomeViewModel @Inject constructor(private val newsRepository: NewsReposito
         return mutableArticleLiveData
     }
 
-    /*fun searchHeadlines(searchQuery: String?): LiveData<List<Article>?> {
-        if (searchQuery == lastSearchQuery) return searchedArticleLiveData
-        viewModelScope.launch {
-            val articleResponse = newsRepository.getSearchedHeadlines(searchQuery)
-            val articleList = articleResponse.body()?.articles
-            searchedArticleLiveData.value = articleList
-        }
-        lastSearchQuery = searchQuery
-        return searchedArticleLiveData
-    }*/
 
-    fun deleteArticle(article: Article) = viewModelScope.launch {
-        newsRepository.deleteArticle(article)
-    }
 
     fun saveArticle(article: Article) = viewModelScope.launch {
         newsRepository.insertArticleInDb(article)
