@@ -27,13 +27,5 @@ class NewsClientTest {
         }
     }
 
-  /*  @Test
-    fun testSearchHeadlines() {
-        runBlocking {
-            val topHeadLines = newsApiClient.client.searchHeadlines("elon musk")
-            val body = topHeadLines.body()
-            println("Total results: ${body?.totalResults}")
-            assertEquals(body?.status, TEST_OK)
-        }
-    }*/
+
 }
